@@ -1,0 +1,26 @@
+mkdir, touchz:
+1. hdfs dfs -mkdir /hw1
+2. hdfs dfs -mkdir -p /hw1/nested
+3. Trash - это папка, куда попадают файлы из HDFS при обычном удалении.
+Чтобы удалять файлы, минуя .trash, нужно вызвать -rm с флагом -skipTrash
+4. hdfs dfs -touchz /hw1/nested/empty_file
+5. hdfs dfs -rm -skipTrash /hw1/nested/empty_file
+6. hdfs dfs -rm -r -skipTrash /hw1
+
+put, cat, tail, cp:
+1. hdfs dfs -put some_file.txt /
+2. hdfs dfs -cat /some_file.txt 
+3. last 1kb of file:
+	hdfs dfs -tail /some_file.txt
+last n lines:
+	hdfs dfs -cat /some_file.txt | tail -n 3
+4. hdfs dfs -head /some_file.txt
+либо:
+	hdfs dfs -cat /some_file.txt | head -n 3
+5. hdfs dfs -mkdir /new_dir
+hdfs dfs -cp /some_file.txt /new_dir/some_file.txt
+
+1. hdfs dfs -setrep -w 2 /some_file.txt
+	ждал меньше минуты в обоих случаях (на уменьшение и увеличение), может из-за того что файл небольшой
+2. hdfs fsck /some_file.txt -files -blocks -locations
+3. hdfs fsck -blockId blk_1073741836
