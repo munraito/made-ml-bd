@@ -9,6 +9,8 @@ cluster screenshots:
 input data:
 `prices.csv`
 
+MR scripts: `mapper_*.py, reducer_*.py`
+
 run MR jobs:
 ```bash
 hadoop jar /opt/hadoop-3.2.1/share/hadoop/tools/lib/hadoop-streaming-3.2.1.jar -files mapper_mean.py,reducer_mean.py -mapper mapper_mean.py -reducer reducer_mean.py -input /hw1/prices.csv -output /hw1/output && hdfs dfs -cat /hw1/output/*
