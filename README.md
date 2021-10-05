@@ -1,2 +1,2 @@
 # made-ml-bd
-MADE ML on BigData course
+Машинное обучение на больших данных
