@@ -6,6 +6,7 @@ CREATE table default.artists (
 	)
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
+tblproperties ("skip.header.line.count"="1")
 
 -- 0.1 import csv from container 
 LOAD DATA LOCAL INPATH '/artists.csv' OVERWRITE INTO TABLE artists
