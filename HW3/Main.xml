@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Main" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="Main" />
+    <module name="scala_project_HW3" />
+    <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/data/diabetes_target.csv $PROJECT_DIR$/data/diabetes_data.csv $PROJECT_DIR$/data/preds.csv 1000 0.01" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
