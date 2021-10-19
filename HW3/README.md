@@ -3,7 +3,7 @@
 ### Linear regression implemetation using gradient descent
 
 Example of run config is in [Main.xml](Main.xml) 
-(you can import this to IntelliJ IDEA or just look example on how to pass arguments)
+(you can import this to your IDE or just look example on how to pass arguments)
 
 Main pipeline: [Main.scala](scala/Main.scala)
 
