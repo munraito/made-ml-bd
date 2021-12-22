@@ -53,8 +53,8 @@ class RndHpCosLSHModel private[ml](
       hashValues.map(Vectors.dense(_))
   }
   override protected[ml] def hashDistance(x: Array[Vector], y: Array[Vector]): Double = {
-    // similarity between hashes (share of equal hashes)
-    x.zip(y).map(i => if (i._1 == i._2) 1.0 else 0.0).sum / x.length
+    // distance between hashes (share of unequal hashes)
+    x.zip(y).map(i => if (i._1 != i._2) 1.0 else 0.0).sum / x.length
   }
 
   override protected[ml] def keyDistance(x: Vector, y: Vector): Double = {
